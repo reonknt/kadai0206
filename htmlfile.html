@@ -15,15 +15,28 @@
           </li>
     </ul>
 
+    <br>
+
     <script>
         let themap = new Map();
         const onClickButton =()=>{
             themap.set(document.getElementById("username").value,document.getElementById("task").value);
             let i=1;
+            document.write("<table>");
             for (let [key, value] of themap) {
-            console.log(i + ' : ' + key + ' , ' + value);
-            i=i+1;
+                console.log(i + ' : ' + key + ' , ' + value);
+                i=i+1;
+                document.write("<tr>");
+                document.write("<td>");
+                document.write(key);
+                document.write("</td>");
+                document.write("<td>");
+                document.write(value);
+                document.write("</td>");
+                document.write("</tr>");
             }
+            document.write("</table>");
+            
         };
 
     </script>
