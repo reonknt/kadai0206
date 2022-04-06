@@ -16,10 +16,16 @@
     </ul>
 
     <script>
+        let themap = new Map();
         const onClickButton =()=>{
-            console.log(document.getElementById("username").value);
-            console.log(document.getElementById("task").value);
+            themap.set(document.getElementById("username").value,document.getElementById("task").value);
+            let i=1;
+            for (let [key, value] of themap) {
+            console.log(key + ' goes ' + value);
+            i=i+1;
+            }
         };
+
     </script>
   </body>
 </html>
