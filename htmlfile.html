@@ -11,9 +11,16 @@
         <li><input
             type="button"
             value="登録"
-            <!--onclick="onClickButton('hello エリートEmi レオン！')"-->
+            onclick="onClickButton()">
       
           </li>
     </ul>
+
+    <script>
+        const onClickButton =()=>{
+            console.log(document.getElementById("username").value);
+            console.log(document.getElementById("task").value);
+        };
+    </script>
   </body>
 </html>
