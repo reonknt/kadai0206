@@ -17,25 +17,23 @@
 
     <br>
 
+    <div id="table">
+
+    </div>
+
     <script>
         let themap = new Map();
         const onClickButton =()=>{
             themap.set(document.getElementById("username").value,document.getElementById("task").value);
             let i=1;
-            document.write("<table>");
+            let str="<table>";
             for (let [key, value] of themap) {
                 console.log(i + ' : ' + key + ' , ' + value);
                 i=i+1;
-                document.write("<tr>");
-                document.write("<td>");
-                document.write(key);
-                document.write("</td>");
-                document.write("<td>");
-                document.write(value);
-                document.write("</td>");
-                document.write("</tr>");
+                str=str+"<tr><td>"+key+"</td><td>"+value+"</td></tr>"
             }
-            document.write("</table>");
+            
+            document.getElementById('table').innerHTML = str+"</table>";
             
         };
 
