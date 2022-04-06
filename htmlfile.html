@@ -6,14 +6,20 @@
   </head>
   <body>
     <ul>
-        <li>ユーザ名：<input type="text" name="username"></li>
-        <li>タスク：<input type="text" name="task"></li>
+        <li>ユーザ名：<input type="text" name="username" id="username"></li>
+        <li>タスク：<textarea name="task" id="task"></textarea></li>
         <li><input
             type="button"
             value="登録"
-            <!--onclick="onClickButton('hello エリートEmi レオン！')"-->
-      
+            onclick="onClickButton()">
           </li>
     </ul>
+
+    <script>
+        const onClickButton =()=>{
+            console.log(document.getElementById("username").value);
+            console.log(document.getElementById("task").value);
+        };
+    </script>
   </body>
 </html>
