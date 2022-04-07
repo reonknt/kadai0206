@@ -15,12 +15,15 @@
         }
 
         thead{
-          background-color: #834242;
           border-style: solid;
         }
         
         tr:nth-child(odd) {
           background-color: #dddddd;
+        }
+
+        #head{
+          background-color: #ffffff;
         }
     </style>
   </head>
@@ -46,7 +49,7 @@
         const onClickButton =()=>{
             themap.set(document.getElementById("username").value,document.getElementById("task").value);
             let i=1;
-            let str="<table><thead><tr><td><b>ユーザ名</b></td><td><b>タスク</b></td></tr></thead><tbody>";
+            let str="<table><thead><tr id=\"head\"><td><b>ユーザ名</b></td><td><b>タスク</b></td></tr></thead><tbody>";
             for (let [key, value] of themap) {
                 console.log(i + ' : ' + key + ' , ' + value);
                 i=i+1;
