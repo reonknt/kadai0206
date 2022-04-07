@@ -5,11 +5,19 @@
     <title>kadai0406</title>
     <style>
         
-        table{
+        table,thead{
           border-collapse: collapse;
-          width: 100%;
+          text-align: center;
+          width:50%;
+        }
+        tbody{
+          border-style: solid;
         }
 
+        thead{
+          background-color: #834242;
+          border-style: solid;
+        }
         
         tr:nth-child(odd) {
           background-color: #dddddd;
@@ -38,14 +46,14 @@
         const onClickButton =()=>{
             themap.set(document.getElementById("username").value,document.getElementById("task").value);
             let i=1;
-            let str="<table><thead><tr style=\"border-left: none;\"><b>ユーザ名</b></tr><tr>タスク</tr></thead><tbody>";
+            let str="<table><thead><tr><td><b>ユーザ名</b></td><td><b>タスク</b></td></tr></thead><tbody>";
             for (let [key, value] of themap) {
                 console.log(i + ' : ' + key + ' , ' + value);
                 i=i+1;
                 str=str+"<tr><td>"+key+"</td><td>"+value+"</td></tr>"
             }
-            
-            document.getElementById('table').innerHTML = str+"</tbody></table>";
+            console.log(str);
+            document.getElementById('table').innerHTML = ""+str+"</tbody></table>";
             
         };
 
