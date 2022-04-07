@@ -38,7 +38,7 @@
         const onClickButton =()=>{
             themap.set(document.getElementById("username").value,document.getElementById("task").value);
             let i=1;
-            let str="<table><thead><tr><b>ユーザ名</b></tr><tr>タスク</tr></thead><tbody>";
+            let str="<table><thead><tr style=\"border-left: none;\"><b>ユーザ名</b></tr><tr>タスク</tr></thead><tbody>";
             for (let [key, value] of themap) {
                 console.log(i + ' : ' + key + ' , ' + value);
                 i=i+1;
