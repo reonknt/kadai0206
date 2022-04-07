@@ -3,6 +3,29 @@
 <html lang="ja">
   <head>
     <title>kadai0406</title>
+    <style>
+        
+        table,thead{
+          border-collapse: collapse;
+          text-align: center;
+          width:50%;
+        }
+        tbody{
+          border-style: solid;
+        }
+
+        thead{
+          border-style: solid;
+        }
+        
+        tr:nth-child(odd) {
+          background-color: #dddddd;
+        }
+
+        #head{
+          background-color: #ffffff;
+        }
+    </style>
   </head>
   <body>
     <ul>
@@ -26,14 +49,14 @@
         const onClickButton =()=>{
             themap.set(document.getElementById("username").value,document.getElementById("task").value);
             let i=1;
-            let str="<table>";
+            let str="<table><thead><tr id=\"head\"><td><b>ユーザ名</b></td><td><b>タスク</b></td></tr></thead><tbody>";
             for (let [key, value] of themap) {
                 console.log(i + ' : ' + key + ' , ' + value);
                 i=i+1;
                 str=str+"<tr><td>"+key+"</td><td>"+value+"</td></tr>"
             }
-            
-            document.getElementById('table').innerHTML = str+"</table>";
+            console.log(str);
+            document.getElementById('table').innerHTML = ""+str+"</tbody></table>";
             
         };
 
